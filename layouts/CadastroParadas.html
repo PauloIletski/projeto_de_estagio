@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tipos de Paradas</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div class="container">
+	<div class="alert alert-danger" id="popAlertDanger" role="alert">
+			  A simple danger alert—check it out!
+			</div>
+			<div class="alert alert-warning" id="popAlertWarning" role="alert">
+			  A simple warning alert—check it out!
+			</div>
+			<div class="alert alert-info" id="popAlertInfo" role="alert">
+			  A simple info alert—check it out!
+			</div>
+		<div class="card">
+			<div class="card-header">
+				<h2 class="card-title">Cadastrar tipos de paradas</h2>
+			</div>
+			<div class="card-body">
+				<div class="row">
+				<div class="col-md-2">
+						<label for="txtCargo">
+						<input type="text" class="form-control" name="txtCodigoParada" id="txtCodigoParada" readonly>	
+					</div>
+					<div class="col-md-6">
+						<label for="txtCargo">
+						<input type="text" class="form-control" name="txtDescricaoParada" id="txtDescricaoParada" maxlength="30">	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4" style="margin-top: 12px">
+						<input type="checkbox" name="cbkAtivo" id="cbkAtivo">Ativo</input>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-1" style="margin-top: 12px">
+						<button class="btn btn-primary" id="btnNovo">Novo</button>
+					</div>
+					<div class="col-md-1" style="margin-top: 12px">
+						<button class="btn btn-success" id="btnSalvar">Salvar</button>
+					</div>
+						<div class="col-md-1" style="margin-top: 12px">
+						<button class="btn btn-danger" id="btnAlterarFrm">Alterar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+			<div class="card" style="margin-top:12px">
+			<div class="card-header">
+				<h2 class="card-title">Selecionar tipos</h2>
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-md-3">
+						<input type="text" class="form-control" name="txtPesquisar" id="txtPesquisar" placeholder="Pesquise aqui"
+						>	
+					</div>
+				</div>
+
+			<table class="table" id="tbRetorno" style="margin-top: 12px">
+				<thead>
+					<th scope="col">Codigo</th>
+					<th scope="col">Descrição</th>
+					<th scope="col">Ativo</th>
+					<th scope="col">Ação</th>
+				</thead>
+				<tbody id="corpoTbRetorno">
+						
+					</tbody >
+				</table>
+			</div>
+	</div>
+	<script src="/estagio/controlers_js/CadastroParadasControler.js"></script>
+	<script src="/estagio/scripts/events/jquery.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Menu Principal</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<meta charset="utf-8">
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="../layouts/MenuPrincipal.html">OEE</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="../PainelPrincipal.html" target="iframe" id="menuProcesso">Iniciar Processo <span class="sr-only"></span></a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navParametros" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Parametrizar
+		        </a>
+						<div class="dropdown-menu" aria-labelledby="navParametros">
+							<a class="dropdown-item" href="../layouts/CadastroUsuarios.html" target="iframe">Usuários</a>
+							<a class="dropdown-item" href="../layouts/CadTipoEtapa.html" target="iframe">Tipos de Etapas</a>
+							<a class="dropdown-item" href="../layouts/CadastroParadas.html" target="iframe">Tipos de Paradas</a>
+							<a class="dropdown-item" href="../layouts/CadastroCargos.html" target="iframe">Cargos</a>
+							<a class="dropdown-item" href="../layouts/CadastroTiposUsuarios.html" target="iframe">Tipos de Usuários</a>
+							<a class="dropdown-item" href="../layouts/CadastroLaboratorios.html" target="iframe">Laboratórios</a>
+							<a class="dropdown-item" href="../layouts/CadastroProdutos.html" target="iframe">Produtos</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navLogs" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Consultar Logs
+		        </a>
+						<div class="dropdown-menu" aria-labelledby="navLogs">
+							<a class="dropdown-item" href="../layouts/LogUsuario.html" target="iframe">Usuário</a>
+							<a class="dropdown-item" href="../layouts/LogProducao.html" target="iframe">Processo</a>
+							<a class="dropdown-item" href="../layouts/LogOcorrenciaParada.html" target="iframe">Ocorrência de Paradas</a>
+						</div>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navRelatorios" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		          Relatórios
+		        </a>
+						<div class="dropdown-menu" aria-labelledby="navRelatorios">
+							<a class="dropdown-item" href="../layouts/RelatorioTemposParada.html" target="iframe">Tempos de Parada</a>
+							<a class="dropdown-item" href="../layouts/RelatorioParadasDiarias.html" target="iframe">Paradas Diario</a>
+							<a class="dropdown-item" href="../layouts/RelatorioParadasOcorrencia.html" target="iframe">Ocorrência de Paradas</a>
+							<a class="dropdown-item" href="../layouts/RelatorioGeralProducao.html" target="iframe">Resumo de Produções</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../files/Manual.pdf" target="iframe">Manual</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link"  id="btnSair">Sair</a>
+					</li>
+				</ul>
+				<p id="username">Usuário</p>
+
+			</div>
+		</nav>
+		<div class="embed-responsive embed-responsive-16by9" style="margin-top: 24px">
+			<iframe class="embed-responsive-item" src="" name="iframe" id="iframe" allowfullscreen></iframe>
+		</div>
+		<script src="/estagio/scripts/jquery.js"></script>
+		<script src="/estagio/controlers_js/MenuPrincipalControler.js"></script>
+		<script src="/estagio/controlers_js/PainelPrincipalControler.js"></script>
+	</body>
+</html>
